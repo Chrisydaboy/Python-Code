@@ -1,6 +1,39 @@
 from subprocess import time
 import random
 
+
+def DivisionCode():
+    firstNum = random.randint(1, 100)
+    secondNum = random.randint(1, 100)
+
+    print("Whats is " + str(firstNum) + " / " + str(secondNum))
+    userAnswer = int(input())
+    correctAnswer = firstNum/secondNum
+
+    if (userAnswer == correctAnswer):
+        print("Well done you answered correctly!")
+    else:
+        print("You have answered incorrectly")
+    exit()
+
+
+
+def MultiplicationCode():
+    firstNum = random.randint(1, 100)
+    secondNum = random.randint(1, 100)
+
+    print("Whats is " + str(firstNum) + " x " + str(secondNum))
+    userAnswer = int(input())
+    correctAnswer = firstNum*secondNum
+
+    if (userAnswer == correctAnswer):
+        print("Well done you answered correctly!")
+    else:
+        print("You have answered incorrectly")
+    exit()
+
+
+
 def SubtractionCode():
     firstNum = random.randint(1, 100)
     secondNum = random.randint(1, 100)
@@ -37,6 +70,10 @@ def AdditionCode():
 
 
 
+
+
+
+
 #The start of the math game
 print ("Welcome to the math game" + "\n")
 username = input("Whats your username:")
@@ -50,11 +87,16 @@ if (lobbyAnswer == 1):
     opChoice = str(input())
     if (opChoice == "1"):
         AdditionCode()
-    exit()
 
     if(opChoice == "2"):
         SubtractionCode()
-    exit()
+
+    if(opChoice == "3"):
+        MultiplicationCode()
+
+    if(opChoice == "4"):
+        DivisionCode()
+
 
 exit()
 
